@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.TextArea?>
+<BorderPane fx:controller="com.example.notitas.controller.MainController" fx:id="panelPrincipal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+       <VBox prefWidth="300.0" BorderPane.alignment="CENTER" spacing="10">
+           <ListView fx:id="listBlocs" prefWidth="150.0" prefHeight="450.0" onMouseClicked="#leerNota"/>
+           <Button fx:id="btnConfiguracion" text="C" prefHeight="50.0" prefWidth="50.0"/>
+           <Button fx:id="btnCrearNota" text="+" prefHeight="50.0" prefWidth="50.0" onAction="#crearNota"/>
+           <Button fx:id="btnActualizarNota" text="Actualizar" prefHeight="50.0" prefWidth="50.0" onAction="#actualizarNota"/>
+           <Button fx:id="btnEliminarNota" text="Borrar" prefHeight="50.0" prefWidth="50.0" onAction="#eliminarNota"/>
+       </VBox>
+   </left>
+    <center>
+        <AnchorPane fx:id="contenido" prefWidth="500.0" prefHeight="450.0">
+            <TextArea fx:id="txtNota" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+        </AnchorPane>
+    </center>
+</BorderPane>
