@@ -2,6 +2,7 @@ module com.example.notitas {
     requires javafx.controls;
     requires java.sql;
     requires javafx.fxml;
+    requires org.json;
 
 
     opens com.example.notitas to javafx.fxml;
